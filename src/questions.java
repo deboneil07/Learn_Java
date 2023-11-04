@@ -1,8 +1,9 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class questions {
     public static void main(String[] args){
-            palindrome();
+            rand();
     }
 
     private static void fibonacii(){
@@ -95,6 +96,18 @@ public class questions {
              * 
              */
             
+        }
+
+        private static void rand(){
+            Random rand = new Random();
+            Scanner inp = new Scanner(System.in);
+            System.out.println("enter the max value of your random generator: ");
+            int container = inp.nextInt();
+            container = rand.nextInt(container);
+            System.out.println(container);
+
+
+
         }
 
         
