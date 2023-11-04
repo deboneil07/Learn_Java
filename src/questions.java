@@ -103,6 +103,7 @@ public class questions {
             Scanner inp = new Scanner(System.in);
             System.out.println("enter the max value of your random generator: ");
             int container = inp.nextInt();
+            System.out.println(container);
             container = rand.nextInt(container);
             System.out.println(container);
 
