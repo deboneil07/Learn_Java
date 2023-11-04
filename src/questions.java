@@ -101,10 +101,12 @@ public class questions {
         private static void rand(){
             Random rand = new Random();
             Scanner inp = new Scanner(System.in);
-            System.out.println("enter the max value of your random generator: ");
+            System.out.print("enter the max value of your random generator: ");
             int container = inp.nextInt();
+            System.out.print("entered max value is : " );
             System.out.println(container);
             container = rand.nextInt(container);
+            System.out.print("random number generated is: ");
             System.out.println(container);
 
 
