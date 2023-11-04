@@ -34,6 +34,7 @@ public class index {
             Scanner input = new Scanner(System.in);
             System.out.print("enter the number --> ");
             int check = input.nextInt();
+            System.out.println(check);
             
             
         }
