@@ -68,7 +68,7 @@ public class questions {
              * SUM = 0;
              * LOOP STARTS:
              * TEMP = 454;
-             * REMAINDER = TEMP % 10 = 45;
+             * REMAINDER = TEMP % 10 = 4;
              * SUM = (sum * 10) + remainder = 4
              * N = N/10 = 45
              * 
