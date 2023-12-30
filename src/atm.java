@@ -1,11 +1,11 @@
-import java.util.Scanner ;
+import java.util.Scanner;
 
 public class atm {
     public static void main(String[] args){
-        atm();
+        teller_machine();
     }
 
-    private static void atm(){
+    public static void teller_machine(){
         int balance = 1000, withdraw, deposit;
 
         Scanner inp = new Scanner(System.in);
