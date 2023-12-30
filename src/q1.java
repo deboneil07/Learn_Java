@@ -5,11 +5,19 @@ public class q1 {
     
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int n = input.nextInt();
-        System.out.println(isArmstrong(n));
-        
+        // int n = input.nextInt();
+        for (int i = 100; i < 1000; i++) {
+            if (isArmstrong(i)){
+                System.out.println(i + "");
+            }
+            else{
 
-    }   
+            }
+
+    }
+    
+    
+}
     
 //     static boolean isPrime(int n){
 //         if (n <= 1){
