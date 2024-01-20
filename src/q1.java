@@ -4,16 +4,13 @@ public class q1 {
 
     
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        // Scanner input = new Scanner(System.in);
         // int n = input.nextInt();
-        for (int i = 100; i < 1000; i++) {
+        for (int i = 100; i < 408; i++) {
             if (isArmstrong(i)){
                 System.out.println(i + "");
             }
-            else{
-
-            }
-
+            
     }
     
     
@@ -58,6 +55,8 @@ public class q1 {
             return false;
         }     
     }
+
+    
 
 
 
