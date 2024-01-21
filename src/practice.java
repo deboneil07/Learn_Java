@@ -1,19 +1,29 @@
-// import java.util.ArrayList;
+import java.util.*;
+
 public class practice {
-    public static void main(String[] args){
-        int n = 10;
-        int i = 1;
-        func(i, n);
+    public static void main(String[] args) {
+        int[] list = { 1, 2, 3, 3, 4, 4, 4, 4, 5, 6, 6, 8 };
+        func(list);
 
     }
 
-    static void func(int i, int n){
-        if (i > n){
-            System.out.println(" done");
+    static void func(int[] n) {
+        HashMap<Integer, Integer> hashmap = new HashMap<>();
+        int max_check = 0;
+        for (int i : n) {
+            hashmap.put(i, hashmap.getOrDefault(i, 0) + 1);
         }
-        else{
-            System.out.println(i);
-            func(i+1, n);
+
+        for (int i : hashmap.values()) {
+
+            if (i > max_check) {
+                max_check = i;
+
+            }
+
         }
+        System.out.println(hashmap);
+        System.out.println(max_check);
+       
     }
 }
