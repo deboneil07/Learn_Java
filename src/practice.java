@@ -4,7 +4,7 @@ public class practice {
     public static void main(String[] args) {
         int[] list = { 7,4,9,90,3,24,66,323,1 };
         int n = list.length;
-        findHighest(list, n);
+        checkIfSorted(list, n);
         
         
     }
@@ -92,7 +92,52 @@ public class practice {
         //     System.out.println(check);
         // }
 
-        
+        // public static void findSecondHighest(int arr[], int n){
+        //     int current = arr[0];
+        //     int previous = 0;
+
+        //     for (int i = 0; i < n; i++){
+        //         if (arr[i] > current) {
+        //             previous = current;
+        //             current = arr[i];
+        //         }
+        //     }
+        //     System.out.println(previous);
+
+        // }
+
+
+        public static void checkIfSorted(int arr[], int n){
+            int[] original_copy = Arrays.copyOf(arr, n);
+            for (int i = 0; i < n-1; i++){
+                int mini = i;
+                for (int j = i + 1; j<n; j++){
+                    if (arr[j] < arr[mini]){
+                        int temp = arr[j];
+                        arr[j] = arr[mini];
+                        arr[mini] = temp;
+                    }
+                }
+            }
+
+            // for (int i = 0; i < n; i++) {
+            //     System.out.println(original_copy[i]);
+
+            // }
+            
+            // for (int i = 0; i < n; i++) {
+            //     System.out.println(arr[i]);
+            // }
+            
+
+            if (original_copy == arr){
+                System.out.println("That is true!");
+            }
+            else{
+                System.out.println("False!! ");
+            }
+
+        }
 
 
 }
