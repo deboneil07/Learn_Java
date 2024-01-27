@@ -2,9 +2,11 @@ import java.util.*;
 
 public class practice {
     public static void main(String[] args) {
-        int[] list = { 7,4,9,90,3,24,66,323,1 };
+        int[] list = { 1,1,1,2,3,3,3,3,4,4,4,5,6,6 };
         int n = list.length;
-        checkIfSorted(list, n);
+        int d = 3;
+        leftRotate(list, n, d);
+        
         
         
     }
@@ -107,36 +109,72 @@ public class practice {
         // }
 
 
-        public static void checkIfSorted(int arr[], int n){
-            int[] original_copy = Arrays.copyOf(arr, n);
-            for (int i = 0; i < n-1; i++){
-                int mini = i;
-                for (int j = i + 1; j<n; j++){
-                    if (arr[j] < arr[mini]){
-                        int temp = arr[j];
-                        arr[j] = arr[mini];
-                        arr[mini] = temp;
-                    }
-                }
-            }
+        // public static void checkIfSorted(int arr[], int n){
+        //     int[] original_copy = Arrays.copyOf(arr, n);
+        //     for (int i = 0; i < n-1; i++){
+        //         int mini = i;
+        //         for (int j = i + 1; j<n; j++){
+        //             if (arr[j] < arr[mini]){
+        //                 int temp = arr[j];
+        //                 arr[j] = arr[mini];
+        //                 arr[mini] = temp;
+        //             }
+        //         }
+        //     }
 
-            // for (int i = 0; i < n; i++) {
-            //     System.out.println(original_copy[i]);
+        //     if (original_copy == arr){
+        //         System.out.println("That is true!");
+        //     }
+        //     else{
+        //         System.out.println("False!! ");
+        //     }
 
-            // }
+        // }
+
+        // public static void removeDuplicates(int[] arr, int n){
+        //     HashSet<Integer> set = new HashSet<>();
+        //     for (int i : arr){
+        //         set.add(i);
+        //     }
+
+        //     int[] newArr = new int[set.size()];
+        //     int index = 0;
+        //     for (int i : set){
+        //         newArr[index++] = i;
+                
+        //     }
             
-            // for (int i = 0; i < n; i++) {
-            //     System.out.println(arr[i]);
-            // }
+        //     for(int i = 0; i < newArr.length; i++){
+        //         System.out.println(newArr[i]);
+        //     }
+        // }
+
+        public static void leftRotate(int[] arr, int n, int d){
+            int[] tempArr = new int[d];
+            for (int i = 0; i < d ; i++){
+                tempArr[i] = arr[i];
+            }
             
+            // we have initialized the first D elements in a temp array //
 
-            if (original_copy == arr){
-                System.out.println("That is true!");
-            }
-            else{
-                System.out.println("False!! ");
+            // now we re-assign the actual array //
+            for (int i = 0; i < n - 1 - d  ; i++){
+                arr[i] = arr[i + d];
             }
 
+            for (int i = n - d; i < n ; i++){
+                int temp_index = 0;
+                arr[i ] = tempArr[temp_index];
+                temp_index++;
+                
+            }
+
+            for (int i =0; i < n; i++){
+                System.out.println(arr[i]);
+            }
+
+
+            
         }
 
 
