@@ -2,10 +2,8 @@ import java.util.*;
 
 public class practice {
     public static void main(String[] args) {
-        int[] list = { 1,1,1,2,3,3,3,3,4,4,4,5,6,6 };
+        int[] list = { 6,8,2,4,3,9,4,7,5,1,57,9,52 };
         int n = list.length;
-        int d = 3;
-        leftRotate(list, n, d);
         
         
         
@@ -149,33 +147,55 @@ public class practice {
         //     }
         // }
 
-        public static void leftRotate(int[] arr, int n, int d){
-            int[] tempArr = new int[d];
-            for (int i = 0; i < d ; i++){
-                tempArr[i] = arr[i];
-            }
+        // public static void leftRotate(int[] arr, int n, int d){
+        //     int[] tempArr = new int[d];
+        //     for (int i = 0; i < d ; i++){
+        //         tempArr[i] = arr[i];
+        //     }
             
-            // we have initialized the first D elements in a temp array //
+        //     // we have initialized the first D elements in a temp array //
 
-            // now we re-assign the actual array //
-            for (int i = 0; i < n - 1 - d  ; i++){
-                arr[i] = arr[i + d];
-            }
+        //     // now we re-assign the actual array //
+        //     for (int i = 0; i < n - 1 - d  ; i++){
+        //         arr[i] = arr[i + d];
+        //     }
 
-            for (int i = n - d; i < n ; i++){
-                int temp_index = 0;
-                arr[i ] = tempArr[temp_index];
-                temp_index++;
+        //     for (int i = n - d; i < n ; i++){
+        //         int temp_index = 0;
+        //         arr[i ] = tempArr[temp_index];
+        //         temp_index++;
                 
-            }
+        //     }
 
-            for (int i =0; i < n; i++){
-                System.out.println(arr[i]);
-            }
+        //     for (int i = 0; i < n; i++){
+        //         System.out.println(arr[i]);
+        //     }
 
 
             
-        }
+        // }
+
+
+        // public static void selectionSort(int[] arr, int n){
+        //     for (int i = 0; i < n-1; i++){
+        //         int min = i;
+        //         for(int j = i+1; j < n; j++){
+        //             if (arr[j] < arr[min]){
+        //                 min = j;
+        //             }
+        //         }
+
+        //         int temp = arr[i];
+        //         arr[i] = arr[min];
+        //         arr[min] = temp;
+        //     }
+
+        //     for(int i = 0; i<n; i++){
+        //         System.out.println(arr[i]);
+        //     }
+        // }
+
+
 
 
 }
